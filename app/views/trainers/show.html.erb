@@ -1,3 +1,12 @@
 <h3>Trainer</h3>
-<p>Name: <%= @trainer.name if @trainer.name %></p>
-<p>Email: <%= @trainer.email if @trainer.email %></p>
+<p>Name: <%= @trainer.name if @trainer.name %></p><p>Email: <%= @trainer.email if @trainer.email %></p>
+<% if @trainer.pokemons.empty? %>
+	You have no Pokemon. Go get one from Professor Oak before venturing in the tall grass.<br /><br />
+	<% else %>
+	<h3>Your Pokemons</h3>
+	   <% @trainer.pokemons.each do |pokemon| %>
+	            <li><%= pokemon.name %>: level <%= pokemon.level %>: health <%pokemon.health%> </li>
+		<% end %><br /><br />
+<% end %>
+
+
