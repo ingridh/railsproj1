@@ -31,8 +31,8 @@ class PokemonsController < ApplicationController
 		@pokemon.level = 1
 		if !@pokemon.save
 			flash[:error] = @pokemon.errors.full_messages.to_sentence
-		redirect_to trainer_path(@pokemon.trainer_id)
 		end
+		redirect_to trainer_path(@pokemon.trainer_id)
 		
    		
 	end

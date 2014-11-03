@@ -12,6 +12,7 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'foundation-rails'
 gem 'simple_form'
+gem 'rename'
 
 
 group :development do

@@ -106,6 +106,8 @@ GEM
     rake (10.3.2)
     rdoc (4.1.2)
       json (~> 1.4)
+    rename (1.0.2)
+      rails (>= 3.0.0)
     responders (1.1.1)
       railties (>= 3.2, < 4.2)
     sass (3.2.19)
@@ -167,6 +169,7 @@ DEPENDENCIES
   rails (= 4.1.5)
   rails_12factor
   rails_layout
+  rename
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   simple_form
