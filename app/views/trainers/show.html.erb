@@ -1,12 +1,18 @@
 <h3>Trainer</h3>
 <p>Name: <%= @trainer.name if @trainer.name %></p><p>Email: <%= @trainer.email if @trainer.email %></p>
+
 <% if @trainer.pokemons.empty? %>
 	You have no Pokemon. Go get one from Professor Oak before venturing in the tall grass.<br /><br />
 	<% else %>
-	<h3>Your Pokemons</h3>
+	<h3>Your Pokemon</h3>
 	   <% @trainer.pokemons.each do |pokemon| %>
-	            <li><%= pokemon.name %>: level <%= pokemon.level %>: health <%pokemon.health%> </li>
+	            <li><%= pokemon.name %>: level <%= pokemon.level %> and health <%=pokemon.health%>	 
+	            <%= button_to "Damage Pokemon!", damage_path(id: pokemon), :class => "button medium", :method => :patch %></li>
 		<% end %><br /><br />
+
+<h3> Create Your Own Pokemon!</h3>
+	<%= button_to "New Pokemon", new_path(:trainer_id => @trainer), :class => "button medium", :method => :get %>
+
 <% end %>
 
 
